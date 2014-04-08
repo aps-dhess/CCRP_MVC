@@ -2,10 +2,29 @@
     ViewBag.Title = "Index";
 }
 
-<h2>@ViewBag.Grade @ViewBag.Subject Homepage</h2>
-
-
-<ul>
-    <li><a href="~/resources/@ViewBag.Subject/@ViewBag.Grade">Resources</a></li>
-    <li><a href="~/ig/@ViewBag.Subject/@ViewBag.Grade">Instructional Guidelines</a></li>
-</ul>
+<div id="panel">
+    <div id = "title"><h1>@ViewBag.Grade @ViewBag.Subject Homepage</h1></div>
+    <table class="IconTable">
+        <tr>
+            <td>
+                <div class="icon"><a class="icon-link" href="~/resources/@ViewBag.Subject/@ViewBag.Grade"><img class="icon-pic" src="~/Images/Icons/resources%20wrench.png" /></a></div>
+                <div class="icon-text"><a class="icon-link" href="~/resources/@ViewBag.Subject/@ViewBag.Grade">Resources</a></div>
+            </td>
+            <td>
+                <div class="icon"><a class="icon-link" href="~/assessments/@ViewBag.Subject/@ViewBag.Grade"><img class="icon-pic" src="~/Images/Icons/assessmentslink.png" /></a></div>
+                <div class="icon-text"><a class="icon-link" href="~/assessments/@ViewBag.Subject/@ViewBag.Grade">Assessments</a></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="icon"><a class="icon-link" href="~/ig/@ViewBag.Subject/@ViewBag.Grade"><img class="icon-pic" src="~/Images/Icons/Resources.png" /></a></div>
+                <div class="icon-text"><a class="icon-link" href="~/ig/@ViewBag.Subject/@ViewBag.Grade">Instructional Guidelines</a></div>
+            </td>
+            <td>
+                <div class="icon"><a class="icon-link" href="~/standards/@ViewBag.Subject/@ViewBag.Grade"><img class="icon-pic" src="~/Images/Icons/CommonCore.png" /></a></div>
+                <div class="icon-text"><a class="icon-link" href="~/standards/@ViewBag.Subject/@ViewBag.Grade">Standards</a></div>
+            </td>
+        </tr>
+	
+    </table>
+</div>  

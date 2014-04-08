@@ -751,7 +751,52 @@ tr.pager td {
         padding: 10px 0;
     }
 
-        footer p {
-            margin: 0;
-        }
+    footer p {
+        margin: 0;
+    }
 }
+/* Team Page Icons
+----------------------------------------------------------*/
+    #panel { 
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5%;
+		width: 600px;
+		text-align: center;
+    }
+    .icon {
+	    text-align: center;
+    }
+    .icon-text {
+	    font-family: arial;
+	    font-size: 16px;
+	    text-align: center;
+	    font-weight: bold;
+    }
+    a.icon-link {
+	    color: #5F2E72;
+	    font-weight: normal;
+    }
+    .icon-link {
+	    color: #5F2E72;
+	    font-weight: normal;
+    }
+    .icon-pic {
+	    height: 122px;
+	    width: 122px;
+	    border: 0;
+	    border-style: none;
+    }
+    .IconTable {
+	    margin-left: auto;
+	    margin-right: auto;
+	    font-family: "arial", san-serif;
+	    font-size: small;
+    }
+    .IconTable td {
+	    padding-bottom: 10px;
+	    padding-left: 10px;
+	    padding-right: 10px;
+	    padding-top: 10px;
+	    vertical-align: top;
+    }
