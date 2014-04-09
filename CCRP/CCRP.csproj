@@ -149,6 +149,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CCRPdb.cs" />
+    <Compile Include="Models\Coach.cs" />
+    <Compile Include="Models\Grade.cs" />
+    <Compile Include="Models\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -259,7 +263,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\Icons\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

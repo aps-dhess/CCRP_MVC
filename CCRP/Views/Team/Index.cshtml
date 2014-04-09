@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<CCRP.Models.Subject>
+
+@{
     ViewBag.Title = "Index";
 }
 
@@ -28,3 +30,11 @@
 	
     </table>
 </div>  
+
+@foreach(var item in Model)
+{
+    <div>
+        <h4>@item.Title, @item.ID</h4>
+    </div>
+    <hr />
+}
