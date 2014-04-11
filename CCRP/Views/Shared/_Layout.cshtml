@@ -11,9 +11,10 @@
     <body>
         <header>
             <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("CCRP", "Index", "Home")</p>
+                <div class="float-left"> 
+                    <p class="site-title"><a href="~/"><img class="logo" src="~/images/icons/commoncorelogo.png" /></a>@Html.ActionLink("CCRP", "Index", "Home")</p> 
                 </div>
+                
                 <div class="float-right">
                     <section id="login">
                         <span class="username">@User.Identity.Name</span>
@@ -23,8 +24,8 @@
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                            <li>@Html.ActionLink("ELA","ELA/K-5","Team")</li>
-                            <li>@Html.ActionLink("Math","Math/K-5","Team")</li>
+                            <li>@Html.ActionLink("ELA","K-5 ELA","Team")</li>
+                            <li>@Html.ActionLink("Math","K-5 Math","Team")</li>
                         </ul>
                     </nav>
                 </div>

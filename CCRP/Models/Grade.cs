@@ -10,6 +10,5 @@ namespace CCRP.Models
         public int ID { get; set; }
         public string Title { get; set; }
         public int SubjectID { get; set; }
-        public ICollection<Coach> Coaches { get; set; }
     }
 }

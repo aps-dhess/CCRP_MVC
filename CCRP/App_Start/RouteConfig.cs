@@ -14,8 +14,8 @@ namespace CCRP
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute("Team",
-                "team/{subject}/{grade}",
-                new { controller = "Team", action = "Index", subject = "", grade = "" });
+                "team/{subject}",
+                new { controller = "Team", action = "Index", subject = ""});
               
 
             routes.MapRoute(

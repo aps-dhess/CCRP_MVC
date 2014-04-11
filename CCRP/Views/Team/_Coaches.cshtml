@@ -1,0 +1,17 @@
+﻿@model CCRP.Models.CoachListView
+
+@*<div class="coach_list">
+    <div class="coach">
+        <img class="coach_pic" src="~/images/profiles/@Model.ProfileImgUrl" />
+        <a class="email" href="mailto:@Model.EmailAddress">@Model.NameFull</a>
+        <p class ="coach_job">@Model.JobTitle</p>
+    </div>
+</div>*@
+
+<div id="coach">
+    <a href="mailto:@Model.EmailAddress">
+        <span><img class="image" src="~/images/profiles/@Model.ProfileImgUrl"/>
+        @Model.NameFull</span>
+    <span class="job">@Model.JobTitle</span>
+         </a>
+</div>

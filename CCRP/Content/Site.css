@@ -133,6 +133,7 @@ footer {
     font-family: Rockwell, Consolas, "Courier New", Courier, monospace;
     font-size: 2.3em;
     margin: 0;
+    
 }
 
 .site-title a, .site-title a:hover, .site-title a:active {
@@ -142,6 +143,9 @@ footer {
     text-decoration: none;
 }
 
+img.logo {
+   vertical-align: middle;
+}
 
 /* login
 ----------------------------------------------------------*/
@@ -800,3 +804,49 @@ tr.pager td {
 	    padding-top: 10px;
 	    vertical-align: top;
     }
+
+/* Coaches WebPart
+----------------------------------------------------------*/
+
+    #coach_list {
+        margin-left: auto;
+        margin-right: auto;
+        width: 750px;
+    }
+
+    .job {
+        display:block;
+        clear: both;
+        font-size: 10px;
+        text-align: center;
+        
+        color: black;
+
+    }
+    
+     #coach {
+        float: left;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 125px;
+    }
+
+    #coach a {
+        display:block; 
+        float: left;
+        color: #5F2E72;
+        font-size: 14px;
+        text-align: center;
+        text-decoration:none;
+    }
+    .image {
+        display:block;
+        height:80px;
+        width:80px; 
+        margin-left:auto;
+        margin-right:auto;
+    }
+

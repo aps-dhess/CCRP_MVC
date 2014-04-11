@@ -149,8 +149,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CCRPdb.cs" />
     <Compile Include="Models\Coach.cs" />
+    <Compile Include="Models\CoachListView.cs" />
     <Compile Include="Models\Grade.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -259,10 +261,12 @@
     <Content Include="packages.config" />
     <None Include="readme.txt" />
     <Content Include="Views\Team\Index.cshtml" />
+    <Content Include="Views\Team\_Coaches.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\Icons\" />
+    <Folder Include="Images\Profiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

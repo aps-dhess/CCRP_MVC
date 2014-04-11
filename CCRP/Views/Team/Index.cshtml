@@ -1,40 +1,45 @@
-﻿@model IEnumerable<CCRP.Models.Subject>
+﻿@model IEnumerable<CCRP.Models.CoachListView>
 
 @{
     ViewBag.Title = "Index";
 }
 
 <div id="panel">
-    <div id = "title"><h1>@ViewBag.Grade @ViewBag.Subject Homepage</h1></div>
+    <div id="title">
+        <h1>@ViewBag.Subject Homepage</h1>
+    </div>
     <table class="IconTable">
         <tr>
             <td>
-                <div class="icon"><a class="icon-link" href="~/resources/@ViewBag.Subject/@ViewBag.Grade"><img class="icon-pic" src="~/Images/Icons/resources%20wrench.png" /></a></div>
-                <div class="icon-text"><a class="icon-link" href="~/resources/@ViewBag.Subject/@ViewBag.Grade">Resources</a></div>
+                <div class="icon"><a class="icon-link" href="~/resources/@ViewBag.Subject">
+                    <img class="icon-pic" src="~/Images/Icons/resources%20wrench.png" /></a></div>
+                <div class="icon-text"><a class="icon-link" href="~/resources/@ViewBag.Subject">Resources</a></div>
             </td>
             <td>
-                <div class="icon"><a class="icon-link" href="~/assessments/@ViewBag.Subject/@ViewBag.Grade"><img class="icon-pic" src="~/Images/Icons/assessmentslink.png" /></a></div>
-                <div class="icon-text"><a class="icon-link" href="~/assessments/@ViewBag.Subject/@ViewBag.Grade">Assessments</a></div>
+                <div class="icon"><a class="icon-link" href="~/assessments/@ViewBag.Subject">
+                    <img class="icon-pic" src="~/Images/Icons/assessmentslink.png" /></a></div>
+                <div class="icon-text"><a class="icon-link" href="~/assessments/@ViewBag.Subject">Assessments</a></div>
             </td>
         </tr>
         <tr>
             <td>
-                <div class="icon"><a class="icon-link" href="~/ig/@ViewBag.Subject/@ViewBag.Grade"><img class="icon-pic" src="~/Images/Icons/Resources.png" /></a></div>
-                <div class="icon-text"><a class="icon-link" href="~/ig/@ViewBag.Subject/@ViewBag.Grade">Instructional Guidelines</a></div>
+                <div class="icon"><a class="icon-link" href="~/ig/@ViewBag.Subject">
+                    <img class="icon-pic" src="~/Images/Icons/Resources.png" /></a></div>
+                <div class="icon-text"><a class="icon-link" href="~/ig/@ViewBag.Subject">Instructional Guidelines</a></div>
             </td>
             <td>
-                <div class="icon"><a class="icon-link" href="~/standards/@ViewBag.Subject/@ViewBag.Grade"><img class="icon-pic" src="~/Images/Icons/CommonCore.png" /></a></div>
-                <div class="icon-text"><a class="icon-link" href="~/standards/@ViewBag.Subject/@ViewBag.Grade">Standards</a></div>
+                <div class="icon"><a class="icon-link" href="~/standards/@ViewBag.Subject">
+                    <img class="icon-pic" src="~/Images/Icons/CommonCore.png" /></a></div>
+                <div class="icon-text"><a class="icon-link" href="~/standards/@ViewBag.Subject">Standards</a></div>
             </td>
         </tr>
-	
-    </table>
-</div>  
 
-@foreach(var item in Model)
-{
-    <div>
-        <h4>@item.Title, @item.ID</h4>
-    </div>
-    <hr />
-}
+    </table>
+</div>
+
+<div id="coach_list">
+    @foreach (var item in Model)
+    {
+        @Html.Partial("_Coaches", item)
+    }
+</div>

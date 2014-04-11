@@ -13,18 +13,19 @@ namespace CCRP.Controllers
         // GET: /Team/
         CCRPdb _db = new CCRPdb();
 
-        public ActionResult Index(string subject, string grade)
+        public ActionResult Index(string subject = null)
         {
             var TeamSubject = Server.HtmlEncode(subject);
             ViewBag.Subject = TeamSubject;
-            
-            var TeamGrade = Server.HtmlEncode(grade);
-            ViewBag.Grade = TeamGrade;
 
-            var message = String.Format("{0}:{1}", TeamSubject, TeamGrade);
-            ViewBag.Message = message;
+            //var model = _db.Coaches.ToList();
 
-            var model = _db.Subjects.ToList();
+            var model =
+               from c in _db.Coaches
+               join s in _db.Subjects on c.Subject_ID equals s.ID
+               where (s.Title == subject)
+               select new CoachListView {NameFull = c.NameFull, JobTitle = c.JobTitle, EmailAddress = c.EmailAddress, ProfileImgUrl = c.ProfileImgUrl, Subject = s.Title};
+
           
             return View(model);
         }
